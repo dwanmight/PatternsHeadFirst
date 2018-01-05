@@ -18,4 +18,9 @@ public class GarageDoorCloseCommand implements Command {
         mGarageDoor.lightOff();
         mGarageDoor.down();
     }
+
+    @Override public void undo() {
+        mGarageDoor.lightOn();
+        mGarageDoor.up();
+    }
 }

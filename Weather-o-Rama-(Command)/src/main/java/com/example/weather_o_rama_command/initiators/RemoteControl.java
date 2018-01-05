@@ -1,6 +1,7 @@
 package com.example.weather_o_rama_command.initiators;
 
 import com.example.weather_o_rama_command.Command;
+import com.example.weather_o_rama_command.commands.NoCommand;
 
 /**
  * Created by ilya on 05.01.18.
@@ -9,15 +10,18 @@ import com.example.weather_o_rama_command.Command;
 public class RemoteControl {
     private Command[] onCommands;
     private Command[] offCommands;
+    private Command undoCommand;
 
     public RemoteControl() {
         onCommands = new Command[7];
         offCommands = new Command[7];
 
+        Command noCommand = new NoCommand();
         for (int i = 0; i < onCommands.length; i++) {
-            onCommands[i] = null;
-            offCommands[i] = null;
+            onCommands[i] = noCommand;
+            offCommands[i] = noCommand;
         }
+        undoCommand = noCommand;
     }
 
     public void setCommand(int slot, Command onCommand, Command offCommand) {
@@ -30,13 +34,19 @@ public class RemoteControl {
     public void onButtonWasPressed(int slot) {
         if (isSlotValid(slot)) {
             onCommands[slot].execute();
+            undoCommand = onCommands[slot];
         }
     }
 
     public void offButtonWasPressed(int slot) {
         if (isSlotValid(slot)) {
             offCommands[slot].execute();
+            undoCommand = offCommands[slot];
         }
+    }
+
+    public void undoButtonPushed() {
+        undoCommand.undo();
     }
 
     public boolean isSlotValid(int slot) {

@@ -36,9 +36,12 @@ public class myClass {
 
         remoteControl.setCommand(0, lightOnCommand, lightOffCommand);
         remoteControl.setCommand(1, garageDoorOpenCommand, garageDoorCloseCommand);
-        System.out.printf(remoteControl.toString());
+        System.out.println(remoteControl.toString() + "\n");
 
         remoteControl.onButtonWasPressed(0);
+        remoteControl.undoButtonPushed();
         remoteControl.offButtonWasPressed(1);
+        remoteControl.undoButtonPushed();
+
     }
 }

@@ -7,4 +7,6 @@ package com.example.weather_o_rama_command;
 public interface Command {
 
     void execute();
+
+    void undo();
 }
