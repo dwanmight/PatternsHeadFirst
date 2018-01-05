@@ -6,13 +6,21 @@ package com.example.weather_o_rama_command.request_receivers;
 
 public class GarageDoor {
 
-    public void up() {}
+    public void up() {
+        System.out.println("Garage up");
+    }
 
-    public void down() {}
+    public void down() {
+        System.out.println("Garage down");
+    }
 
     public void stop() {}
 
-    public void lightOn() {}
+    public void lightOn() {
+        System.out.printf(" Garage light On");
+    }
 
-    public void lightOff() {}
+    public void lightOff() {
+        System.out.println("Garage light off");
+    }
 }
