@@ -1,1 +1,1 @@
-include ':app', ':duckStrategyLib', ':WorkStationPublisherLib', ':starBuzzDecoratorLib', ':PizzaStoreFactorylib', ':Weather-o-Rama-(Command)'
+include ':app', ':duckStrategyLib', ':WorkStationPublisherLib', ':starBuzzDecoratorLib', ':PizzaStoreFactorylib', ':Weather-o-Rama-(Command)', ':CollectionAdapterLib'
