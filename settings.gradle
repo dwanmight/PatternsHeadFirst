@@ -1,1 +1,1 @@
-include ':app', ':duckStrategyLib', ':WorkStationPublisherLib', ':starBuzzDecoratorLib', ':PizzaStoreFactorylib', ':Weather-o-Rama-(Command)', ':CollectionAdapterLib', ':Home-Theater-(Facade)lib', ':StarBuz-TemplateMethodLib', ':MenuCollection-(Iterator_Composer)Lib'
+include ':app', ':duckStrategyLib', ':WorkStationPublisherLib', ':starBuzzDecoratorLib', ':PizzaStoreFactorylib', ':Weather-o-Rama-(Command)', ':CollectionAdapterLib', ':Home-Theater-(Facade)lib', ':StarBuz-TemplateMethodLib', ':MenuCollection-(Iterator_Composer)Lib', ':Mighty-Gumball-(State)lib'
